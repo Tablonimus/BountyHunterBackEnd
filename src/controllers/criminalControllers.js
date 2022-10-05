@@ -22,7 +22,9 @@ const postCriminal = async (
   gender,
   image,
   subjects,
-  reward_text
+  reward_text,
+  url
+
 ) => {
   try {
     const newCriminal = await Criminal.create({
@@ -31,11 +33,28 @@ const postCriminal = async (
       gender,
       image,
       subjects,
-      reward_text
+      reward_text,
+      url
     });
   } catch (error) {
     console.error(err);
   }
 };
+async function getInfoByTitle(title) {
+  try {
+    if (title.length > 0) {
+      //If flama
 
-module.exports = { getAllCriminals, postCriminal };
+      const getCriminalInfo = await Criminal.findOne({
+        where: { title: title },
+      });
+      return getCriminalInfo;
+    } else {
+      throw new Error("Data must be correct");
+    }
+  } catch (error) {
+    throw new Error("getInfoByTitle controller ERROR");
+  }
+}
+
+module.exports = { getAllCriminals, postCriminal, getInfoByTitle };
