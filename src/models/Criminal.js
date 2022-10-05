@@ -17,7 +17,8 @@ module.exports = (sequelize) => {
       gender: { type: DataTypes.STRING },
       subjects: { type: DataTypes.STRING },
       reward_text: { type: DataTypes.STRING },
-      urlocal: { type: DataTypes.STRING },
+      urlocal: { type: DataTypes.STRING },//´PROBAR DATOS CRUZADOS
+      
     },
     { timestamps: false }
   );
