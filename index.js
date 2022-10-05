@@ -20,7 +20,7 @@
 const server = require("./src/app.js");
 const { conn } = require("./src/db.js");
 const { PORT } = process.env;
-//connected with herokuapp
+//connected with herokuapp...
 conn.sync({ force: true }).then(() => {
   server.listen(PORT, () => {
     console.log(`Listen on port ${PORT}`); // eslint-disable-line no-console
