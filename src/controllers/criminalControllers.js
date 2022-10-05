@@ -23,7 +23,7 @@ const postCriminal = async (
   image,
   subjects,
   reward_text,
-  url
+  urlocal
 
 ) => {
   try {
@@ -34,7 +34,7 @@ const postCriminal = async (
       image,
       subjects,
       reward_text,
-      url
+      urlocal
     });
   } catch (error) {
     console.error(err);

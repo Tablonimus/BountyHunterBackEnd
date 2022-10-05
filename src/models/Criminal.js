@@ -17,7 +17,7 @@ module.exports = (sequelize) => {
       gender: { type: DataTypes.STRING },
       subjects: { type: DataTypes.STRING },
       reward_text: { type: DataTypes.STRING },
-      url: { type: DataTypes.STRING },
+      urlocal: { type: DataTypes.STRING },
     },
     { timestamps: false }
   );
